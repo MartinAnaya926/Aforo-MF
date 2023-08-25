@@ -1,10 +1,19 @@
 from openpyxl import load_workbook
 import xlwings as xw
 import matplotlib.pyplot as plt
+import locale
 
 #################################
 #################################
 #################################
+# Set to German locale to get comma decimal separater
+locale.setlocale(locale.LC_NUMERIC, 'es_ES')
+
+plt.rcdefaults()
+
+# Tell matplotlib to use the locale we set above
+plt.rcParams['axes.formatter.use_locale'] = True
+########################
 
 while True:
     
@@ -15,15 +24,15 @@ while True:
     '''
 
     # Ruta del archivo Excel original
-    ruta_archivo_original = r"C:\Users\SHI-PC34.SHI-PC34\Desktop\Martin_Anaya\01_Liquidos\02_VSC\01_Input\Formato_Aforos - propuesta.xlsx"
+    ruta_archivo_original = r"C:\Users\SHI-PC06\Martin_Anaya\01_Liquidos\02_VSC\01_Input\Formato_Aforos - propuesta.xlsx"
     # Ruta y nombre de la carpeta donde se almacenan los archivos de Excel modificados
-    ruta_archivo_modificado = r"C:\Users\SHI-PC34.SHI-PC34\Desktop\Martin_Anaya\01_Liquidos\MF\Out"
+    ruta_archivo_modificado = r"C:\Users\SHI-PC06\Martin_Anaya\01_Liquidos\MF\Output"
     # Ruta del archivo que contiene los datos para el diccionario
-    ruta_archivo_fuente = r"C:\Users\SHI-PC34.SHI-PC34\Desktop\Martin_Anaya\01_Liquidos\MF\DPT-MF.xlsx"
+    ruta_archivo_fuente = r"C:\Users\SHI-PC06\Martin_Anaya\01_Liquidos\MF\DPT-MF - copia.xlsx"
     #Ruta para guardar las gráficas
-    ruta_grafica = r"C:\Users\SHI-PC34.SHI-PC34\Desktop\Martin_Anaya\01_Liquidos\MF\Out"
+    ruta_grafica = r"C:\Users\SHI-PC06\Martin_Anaya\01_Liquidos\MF\Output"
     #Ruta imagen para el relleno de la gráfica
-    textura_1 = plt.imread(r"C:\Users\SHI-PC34.SHI-PC34\Desktop\Martin_Anaya\01_Liquidos\02_VSC\01_Input\textura-puntos.jpg")
+    textura_1 = plt.imread(r"C:\Users\SHI-PC06\Martin_Anaya\05_Procesamiento\Aforos_liquidos\textura-puntos.jpg")
 
     #################################
     #################################
